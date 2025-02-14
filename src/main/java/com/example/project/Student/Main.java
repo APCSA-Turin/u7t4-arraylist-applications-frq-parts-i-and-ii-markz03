@@ -1,19 +1,10 @@
-package com.example.project;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+package com.example.project.Student;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import org.junit.jupiter.api.Test;
-
-import com.example.project.Student.Student;
-import com.example.project.Student.Utility;
-
-public class TestUtility {
-    
-    @Test
-    public void testSort(){
+public class Main {
+    public static void main(String[] args) {
         Student s1 = new Student("Abby", "Smith", 96.7);
         Student s2 = new Student("Michelle", "Jones", 98.1);
         Student s3 = new Student("Chase", "Bean", 95.2);
@@ -26,7 +17,6 @@ public class TestUtility {
         Student s10 = new Student("Dean", "Jones", 93.2);
 
         ArrayList<Student> students = new ArrayList<Student>(Arrays.asList(s1, s2, s3, s4, s5, s6, s7, s8, s9, s10));
-        ArrayList<Student> expected = new ArrayList<Student>(Arrays.asList(s7,s3,s4,s9,s6,s8,s5,s10,s2,s1));
-        assertEquals(expected,Utility.sortStudents(students));
+        System.out.println(Utility.sortStudents(students));
     }
 }
